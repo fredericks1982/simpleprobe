@@ -18,8 +18,8 @@ PORT=9090 python server.py
 
 ### Devcontainer
 
-Open the project in VS Code and select **Reopen in Container**. The probe starts automatically on port 1982.
+Open the project in VS Code and select **Reopen in Container**. The probe starts automatically and is accessible on port 2982 (via docker-compose).
 
 ## Configuration
 
-Set the `PORT` environment variable in `.env` (default: `1982`).
+Set the `PORT` environment variable in `.env` (default: `8080` internally, exposed as `2982` via docker-compose).
