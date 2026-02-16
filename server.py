@@ -1,7 +1,7 @@
 import os
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-PORT = int(os.environ.get("PORT", 9090))
+SIMPLEPROBE_PORT = int(os.environ.get("SIMPLEPROBE_PORT", 9090))
 
 HTML = """\
 <!DOCTYPE html>
@@ -20,6 +20,6 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    server = HTTPServer(("0.0.0.0", PORT), Handler)
-    print(f"Probe running on port {PORT}")
+    server = HTTPServer(("0.0.0.0", SIMPLEPROBE_PORT), Handler)
+    print(f"Probe running on port {SIMPLEPROBE_PORT}")
     server.serve_forever()

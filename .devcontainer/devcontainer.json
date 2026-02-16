@@ -13,7 +13,7 @@
     "-p",
     "9090:9090"
   ],
-  "postStartCommand": "nohup python server.py > /tmp/probe.log 2>&1 & echo $! > /tmp/probe.pid && echo '✔ Probe is running on port '${PORT:-9090}' (PID '$(cat /tmp/probe.pid)')' ",
+  "postStartCommand": "nohup python server.py > /tmp/probe.log 2>&1 & echo $! > /tmp/probe.pid && echo '✔ Probe is running on port '${SIMPLEPROBE_PORT:-9090}' (PID '$(cat /tmp/probe.pid)')' ",
   "customizations": {
     "vscode": {
       "extensions": [

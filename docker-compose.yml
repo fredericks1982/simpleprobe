@@ -7,5 +7,5 @@ services:
     ports:
       - "2982:9090"
     environment:
-      PORT: 9090
+      SIMPLEPROBE_PORT: 9090
     restart: unless-stopped
