@@ -22,4 +22,4 @@ Open the project in VS Code and select **Reopen in Container**. The probe starts
 
 ## Configuration
 
-Set the `PORT` environment variable in `.env` (default: `8080` internally, exposed as `2982` via docker-compose).
+Set the `PORT` environment variable in `.env` (default: `9090` internally, exposed as `2982` via docker-compose).

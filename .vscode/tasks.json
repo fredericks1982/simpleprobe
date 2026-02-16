@@ -4,7 +4,7 @@
     {
       "label": "Start Probe",
       "type": "shell",
-      "command": "if [ -f /tmp/probe.pid ] && kill -0 $(cat /tmp/probe.pid) 2>/dev/null; then echo 'Probe is already running (PID '$(cat /tmp/probe.pid)')'; else nohup python server.py > /tmp/probe.log 2>&1 & echo $! > /tmp/probe.pid && echo '✔ Probe started on port '${PORT:-2982}' (PID '$(cat /tmp/probe.pid)')'; fi",
+      "command": "if [ -f /tmp/probe.pid ] && kill -0 $(cat /tmp/probe.pid) 2>/dev/null; then echo 'Probe is already running (PID '$(cat /tmp/probe.pid)')'; else nohup python server.py > /tmp/probe.log 2>&1 & echo $! > /tmp/probe.pid && echo '✔ Probe started on port '${PORT:-9090}' (PID '$(cat /tmp/probe.pid)')'; fi",
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
@@ -24,7 +24,7 @@
     {
       "label": "Restart Probe",
       "type": "shell",
-      "command": "if [ -f /tmp/probe.pid ] && kill -0 $(cat /tmp/probe.pid) 2>/dev/null; then kill $(cat /tmp/probe.pid); rm -f /tmp/probe.pid; sleep 0.5; fi && nohup python server.py > /tmp/probe.log 2>&1 & echo $! > /tmp/probe.pid && echo '✔ Probe restarted on port '${PORT:-2982}' (PID '$(cat /tmp/probe.pid))''",
+      "command": "if [ -f /tmp/probe.pid ] && kill -0 $(cat /tmp/probe.pid) 2>/dev/null; then kill $(cat /tmp/probe.pid); rm -f /tmp/probe.pid; sleep 0.5; fi && nohup python server.py > /tmp/probe.log 2>&1 & echo $! > /tmp/probe.pid && echo '✔ Probe restarted on port '${PORT:-9090}' (PID '$(cat /tmp/probe.pid))''",
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
