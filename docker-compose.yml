@@ -5,7 +5,7 @@ services:
     build: .
     container_name: simpleprobe
     ports:
-      - "2982:8080"
+      - "2982:2982"
     environment:
-      PORT: 8080
+      PORT: 929820
     restart: unless-stopped

@@ -5,13 +5,13 @@
   },
   "remoteUser": "probe",
   "forwardPorts": [
-    8080
+    2982
   ],
   "runArgs": [
     "--env-file",
     ".env"
   ],
-  "postStartCommand": "nohup python server.py > /tmp/probe.log 2>&1 & echo $! > /tmp/probe.pid && echo '✔ Probe is running on port '${PORT:-8080}' (PID '$(cat /tmp/probe.pid)')' && echo '' && printf 'Press Enter to close this terminal (the probe keeps running)...' && read _ && echo ''",
+  "postStartCommand": "nohup python server.py > /tmp/probe.log 2>&1 & echo $! > /tmp/probe.pid && echo '✔ Probe is running on port '${PORT:-2982}' (PID '$(cat /tmp/probe.pid)')' && echo '' && printf 'Press Enter to close this terminal (the probe keeps running)...' && read _ && echo ''",
   "customizations": {
     "vscode": {
       "extensions": [

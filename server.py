@@ -1,7 +1,7 @@
 import os
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-PORT = int(os.environ.get("PORT", 1982))
+PORT = int(os.environ.get("PORT", 2982))
 
 HTML = """\
 <!DOCTYPE html>
