@@ -1,0 +1,13 @@
+{
+  "name": "Simple Probe",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "probe",
+  "forwardPorts": [1982],
+  "runArgs": ["--env-file", ".env"],
+  "postStartCommand": "python server.py",
+  "customizations": {
+    "vscode": {
+      "extensions": ["anthropic.claude-code"]
+    }
+  }
+}
