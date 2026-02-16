@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  simpleprobe:
+    build: .
+    container_name: simpleprobe
+    ports:
+      - "1982:1982"
+    environment:
+      PORT: 1982
+    restart: unless-stopped
