@@ -42,3 +42,7 @@ docker compose down
 | `SIMPLEPROBE_PORT` | `9090` | Port the probe listens on inside the container (or locally) |
 
 The `docker-compose.yml` maps external port `2982` to internal port `9090`. Edit the `ports` section if you need a different external port.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
